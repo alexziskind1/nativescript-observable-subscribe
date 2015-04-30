@@ -1,0 +1,35 @@
+﻿{
+  "name": "nativescript-observable-subscribe",
+  "version": "0.1.0",
+  "description": "A NativeScript module to add subscribe functionality to observables",
+  "main": "observablesubscribe.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexziskind1/nativescript-observable-subscribe.git"
+  },
+  "keywords": [
+    "nativescript"
+  ],
+  "author": {
+    "name": "Alexander Ziskind",
+    "email": "alex@nuvious.com",
+    "url": "http://www.nuvious.com/"
+  },
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/alexziskind1/nativescript-observable-subscribe/blob/master/LICENSE"
+  },
+  "bugs": {
+    "url": "https://github.com/alexziskind1/nativescript-observable-subscribe/issues"
+  },
+  "homepage": "https://github.com/alexziskind1/nativescript-observable-subscribe",
+  "gitHead": "dd59375052bb65fc21dfd37e70ee3d1149111ef6",
+  "scripts": {},
+
+  "maintainers": [
+    {
+      "name": "alexziskind1",
+      "email": "alex@nuvious.com"
+    }
+  ]
+}
