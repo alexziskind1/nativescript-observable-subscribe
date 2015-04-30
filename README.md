@@ -42,6 +42,7 @@ Once you have required the module in your code, it will execute and add the subs
 
 ```
 // viewmodel.js
+    ...
     var mainViewModel = new HelloWorldModel();
 	var counterPropName = 'counter';
 
