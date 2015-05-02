@@ -57,3 +57,5 @@ Once you have required the module in your code, it will execute and add the subs
 
 	exports.mainViewModel = mainViewModel;
 ```
+
+*Thanks to [TJ VanToll](https://github.com/tjvantoll) for the directory structure graphic above and the template for this doc
