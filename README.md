@@ -26,6 +26,7 @@ Run `npm install nativescript-observable-subscribe --save` from your project's `
     └── ios
 ```
 
+
 If npm doesn't end up working for you, you can just copy and paste this repo's observablesubscribe.js file into your app and reference it directly.
 
 
@@ -37,12 +38,12 @@ To use the  Observable Subscribe Module you must first `require()` it from your 
 require( "./node_modules/nativescript-observable-subscribe/observablesubscribe" );
 ```
 
-Once you have required the module in your code, it will execute and add the subscribe function to observable. You will be able to start using it to get notified of property changes like this:
+Once you have required the module in your code, it will execute and add the subscribe/unsubscribe functions to observable. You will be able to start using it to get notified of property changes like this:
 
 
 ```
 // viewmodel.js
-    ...
+	...
     var mainViewModel = new HelloWorldModel();
 	var counterPropName = 'counter';
 
@@ -58,4 +59,15 @@ Once you have required the module in your code, it will execute and add the subs
 	exports.mainViewModel = mainViewModel;
 ```
 
-*Thanks to [TJ VanToll](https://github.com/tjvantoll) for the directory structure graphic above and the template for this doc
+If you want to unsubscribe a property from notifications, you can use the unsubscribe function like this:
+
+
+```
+// viewmodel.js
+	...
+	mainViewModel.unsubscribe(counterPropName);
+	...
+```
+
+
+*Thanks to TJ VanToll for the directory structure graphic above and the template for this doc
