@@ -65,7 +65,7 @@ If you want to unsubscribe a property from notifications, you can use the unsubs
 ```
 // viewmodel.js
 	...
-	mainViewModel.unsubscribe(counterPropName);
+	mainViewModel.unsubscribe(counterPropName, callback);
 	...
 ```
 
