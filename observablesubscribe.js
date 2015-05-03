@@ -4,26 +4,28 @@ var propChangeEventName = (observable.knownEvents) ? observable.knownEvents.prop
 var subsPropName = "subscribedProperties";
 
 observable.Observable.prototype.subscribe = function(propName, callback, thisArg) {
-    this[subsPropName] = this[subsPropName] || [];
-    if (this[subsPropName].indexOf(propName) == -1) { //subscribe only if not already subscribed
-        this[subsPropName].push(propName);
-        this.addEventListener(propChangeEventName, function(changeObj){
-            if (changeObj.propertyName == propName && (this[subsPropName].indexOf(propName) > -1)) {
-                if (thisArg) {
-                    callback.apply(thisArg, [changeObj]);
-                }
-                else {
-                    callback(changeObj);
-                }
+    this[subsPropName] = this[subsPropName] || {};
+ 
+    function propChangeHandler(changeObj) {
+        if (changeObj.propertyName == propName && (typeof(changeObj.object[subsPropName][propName]) == "function")) {
+            if (thisArg) {
+                changeObj.object[subsPropName][propName].apply(changeObj.object, [changeObj]);
             }
-        }, thisArg);
+            else {
+                changeObj.object[subsPropName][propName](changeObj);
+            }
+        }
+    }
+    
+    if (!this[subsPropName].hasOwnProperty(propName)) {
+        this[subsPropName][propName] = callback;  
+        this.addEventListener(propChangeEventName, propChangeHandler, thisArg); 
     }
 };
 
-observable.Observable.prototype.unsubscribe = function(propName) {
+observable.Observable.prototype.unsubscribe = function(propName, callback) {
     if (typeof(this[subsPropName]) != "object") return;
-    var idx = this[subsPropName].indexOf(propName);
-    if (idx > -1) {
-        this[subsPropName].splice(idx, 1);
-    }
+    if (!this[subsPropName].hasOwnProperty(propName)) return;
+    delete this[subsPropName][propName];   
+    this.removeEventListener(propChangeEventName, callback);
 };
