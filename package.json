@@ -1,6 +1,6 @@
 {
   "name": "nativescript-observable-subscribe",
-  "version": "0.1.3",
+  "version": "0.1.5",
   "description": "A NativeScript module to add subscribe functionality to observables",
   "main": "observablesubscribe.js",
   "scripts": {
@@ -13,34 +13,10 @@
   "keywords": [
     "nativescript"
   ],
-  "author": {
-    "name": "Alex Ziskind",
-    "email": "alex@nuvious.com",
-    "url": "http://www.nuvious.com/"
-  },
+  "author": "Alex Ziskind <alex@nuvious.com> (http://www.nuvious.com/)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/alexziskind1/nativescript-observable-subscribe/issues"
   },
-  "homepage": "https://github.com/alexziskind1/nativescript-observable-subscribe",
-  "_id": "nativescript-observable-subscribe@0.1.3",
-  "_shasum": "99eefda906fd4a159d0b47a8b170904482462a4d",
-  "_from": "nativescript-observable-subscribe@*",
-  "_npmVersion": "1.4.28",
-  "_npmUser": {
-    "name": "alexziskind1",
-    "email": "alex@nuvious.com"
-  },
-  "maintainers": [
-    {
-      "name": "alexziskind1",
-      "email": "alex@nuvious.com"
-    }
-  ],
-  "dist": {
-    "shasum": "99eefda906fd4a159d0b47a8b170904482462a4d",
-    "tarball": "http://registry.npmjs.org/nativescript-observable-subscribe/-/nativescript-observable-subscribe-0.1.3.tgz"
-  },
-  "directories": {},
-  "_resolved": "https://registry.npmjs.org/nativescript-observable-subscribe/-/nativescript-observable-subscribe-0.1.3.tgz"
+  "homepage": "https://github.com/alexziskind1/nativescript-observable-subscribe"
 }
